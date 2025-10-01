@@ -55,8 +55,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="py-20 bg-accent/30 relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Nossos Treinamentos
