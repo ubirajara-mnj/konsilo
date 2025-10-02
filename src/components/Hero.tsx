@@ -3,6 +3,10 @@ import { ArrowRight } from "lucide-react";
 import logoKonsilo from "@/assets/logo_konsilo.png";
 
 const Hero = () => {
+  const whatsappNumber = "5521982837322";
+  const whatsappMessage = encodeURIComponent("Tenho interesse nos seus treinamentos...");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   return (
     <section id="inicio" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
       {/* Animated background circles */}
@@ -33,6 +37,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-primary text-primary-foreground hover:opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 text-lg px-8"
+              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Conheça nossos treinamentos
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -41,8 +46,11 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8"
+              asChild
             >
-              Fale conosco
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Fale conosco
+              </a>
             </Button>
           </div>
         </div>
