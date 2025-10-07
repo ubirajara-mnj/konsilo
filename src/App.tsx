@@ -13,6 +13,7 @@ import CloudComputing from "./pages/CloudComputing";
 import RPA from "./pages/RPA";
 import InteligenciaArtificial from "./pages/InteligenciaArtificial";
 import AgentesIA from "./pages/AgentesIA";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/rpa" element={<RPA />} />
           <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
           <Route path="/agentes-ia" element={<AgentesIA />} />
+          <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
