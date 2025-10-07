@@ -113,17 +113,24 @@ const ContactForm = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-primary/20">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 text-primary" />
-                    Telefone
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground">Entre em contato pelo formulário</p>
-                </CardContent>
-              </Card>
+              <a 
+                href="https://wa.me/5521982837322?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20treinamentos%20da%20Konsilo." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block transition-transform hover:scale-105"
+              >
+                <Card className="border-primary/20 cursor-pointer hover:border-primary/40 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Phone className="h-5 w-5 text-primary" />
+                      Telefone
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-primary hover:underline">Clique para conversar no WhatsApp</p>
+                  </CardContent>
+                </Card>
+              </a>
 
               <Card className="bg-primary/5 border-primary/20">
                 <CardHeader>
