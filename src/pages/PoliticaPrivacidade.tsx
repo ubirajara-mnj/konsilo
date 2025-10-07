@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Shield, Trash2, CheckCircle2 } from "lucide-react";
+import { Shield, Trash2, CheckCircle2, ArrowLeft } from "lucide-react";
 import { z } from "zod";
+import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,11 @@ const PoliticaPrivacidade = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,6 +74,18 @@ const PoliticaPrivacidade = () => {
         
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
+            {/* Botão Voltar - Topo */}
+            <div className="mb-6">
+              <Button
+                variant="ghost"
+                onClick={() => navigate("/")}
+                className="gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Voltar para Home
+              </Button>
+            </div>
+
             {/* Header */}
             <div className="text-center mb-12">
               <Shield className="w-16 h-16 mx-auto mb-4 text-primary" />
@@ -268,6 +286,18 @@ const PoliticaPrivacidade = () => {
                 </form>
               </CardContent>
             </Card>
+
+            {/* Botão Voltar - Final */}
+            <div className="mt-8 text-center">
+              <Button
+                variant="outline"
+                onClick={() => navigate("/")}
+                className="gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Voltar para Home
+              </Button>
+            </div>
           </div>
         </main>
 
