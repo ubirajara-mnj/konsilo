@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import logoKonsilo from "@/assets/logo_konsilo.png";
+import heroTeam from "@/assets/hero-team.jpg";
 
 const Hero = () => {
   const whatsappNumber = "5521982837322";
@@ -9,6 +10,16 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 overflow-hidden">
+        <img 
+          src={heroTeam} 
+          alt="Equipe de TI colaborando" 
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
+      </div>
+
       {/* Animated background circles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>

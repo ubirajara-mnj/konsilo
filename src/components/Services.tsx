@@ -10,6 +10,7 @@ import {
   Brain, 
   Network 
 } from "lucide-react";
+import trainingClassroom from "@/assets/training-classroom.jpg";
 
 const services = [
   {
@@ -65,8 +66,15 @@ const services = [
 const Services = () => {
   return (
     <section id="servicos" className="py-20 bg-accent/30 relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={trainingClassroom} 
+          alt="Alunos em treinamento" 
+          className="w-full h-full object-cover opacity-5"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

@@ -1,9 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
+import teamSuccess from "@/assets/team-success.jpg";
 
 const CTA = () => {
   return (
     <section className="py-20 bg-gradient-primary relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={teamSuccess} 
+          alt="Equipe celebrando sucesso" 
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-primary/90"></div>
+      </div>
+
       {/* Decorative circles */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
