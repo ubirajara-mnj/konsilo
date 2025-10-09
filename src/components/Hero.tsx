@@ -9,60 +9,59 @@ const Hero = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 overflow-hidden">
-        <img 
-          src={heroTeam} 
-          alt="Equipe de TI colaborando" 
-          className="w-full h-full object-cover opacity-10"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
-      </div>
+    <section id="inicio" className="relative min-h-[90vh] py-12 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left side - Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="mb-8 animate-fade-in">
+              <img 
+                src={logoKonsilo} 
+                alt="Konsilo - Consultoria e Treinamento" 
+                className="h-32 md:h-48 mx-auto lg:mx-0 drop-shadow-2xl"
+              />
+            </div>
 
-      {/* Animated background circles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-700"></div>
-      </div>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 animate-fade-in-up">
+              Soluções em Tecnologia da Informação
+            </h1>
+            
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+              Transforme sua equipe com treinamentos especializados em tecnologias emergentes e metodologias ágeis
+            </p>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 animate-fade-in">
-            <img 
-              src={logoKonsilo} 
-              alt="Konsilo - Consultoria e Treinamento" 
-              className="h-48 md:h-[512px] mx-auto drop-shadow-2xl"
-            />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up">
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary text-primary-foreground hover:opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 text-lg px-8"
+                onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Conheça nossos treinamentos
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8"
+                asChild
+              >
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Fale conosco
+                </a>
+              </Button>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 animate-fade-in-up [animation-delay:200ms] opacity-0">
-            Soluções em Tecnologia da Informação
-          </h1>
-          
-          <p className="text-lg md:text-xl text-secondary mb-8 max-w-2xl mx-auto animate-fade-in-up [animation-delay:400ms] opacity-0">
-            Transforme sua equipe com treinamentos especializados em tecnologias emergentes e metodologias ágeis
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up [animation-delay:600ms] opacity-0">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 shadow-lg hover:shadow-xl transition-all duration-300 text-lg px-8"
-              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Conheça nossos treinamentos
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-primary text-primary hover:bg-primary/5 text-lg px-8"
-              asChild
-            >
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Fale conosco
-              </a>
-            </Button>
+          {/* Right side - Image */}
+          <div className="order-1 lg:order-2 animate-fade-in">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={heroTeam} 
+                alt="Equipe de TI feliz colaborando em um ambiente moderno" 
+                className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>

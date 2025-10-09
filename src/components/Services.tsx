@@ -65,18 +65,18 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-20 bg-accent/30 relative overflow-hidden">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src={trainingClassroom} 
-          alt="Alunos em treinamento" 
-          className="w-full h-full object-cover opacity-5"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="servicos" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4">
+        {/* Image Section */}
+        <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+          <img 
+            src={trainingClassroom} 
+            alt="Alunos em sala de aula de treinamento" 
+            className="w-full h-[250px] md:h-[350px] object-cover"
+          />
+        </div>
+
+        {/* Title Section */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Nossos Treinamentos
@@ -86,11 +86,12 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Link key={index} to={service.link}>
               <Card 
-                className="group hover:shadow-[var(--shadow-primary)] transition-all duration-300 hover:-translate-y-1 border-border bg-card h-full cursor-pointer"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border bg-card h-full cursor-pointer"
               >
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
