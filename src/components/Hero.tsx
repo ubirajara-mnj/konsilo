@@ -9,7 +9,7 @@ const Hero = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] py-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-[70vh] py-12 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 

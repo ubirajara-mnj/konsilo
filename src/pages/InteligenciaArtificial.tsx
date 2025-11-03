@@ -4,8 +4,12 @@ import { CheckCircle2, ArrowLeft, Target, BookOpen, Users, Award, Brain } from "
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 const InteligenciaArtificial = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const whatsappNumber = "5521982837322";
   const whatsappMessage = encodeURIComponent("Tenho interesse no treinamento de Inteligência Artificial!");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;

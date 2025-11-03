@@ -4,8 +4,12 @@ import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
 
 const EngenhariaSoftware = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const whatsappNumber = "5521982837322";
   const whatsappMessage = encodeURIComponent("Tenho interesse no treinamento de Engenharia de Software!");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
