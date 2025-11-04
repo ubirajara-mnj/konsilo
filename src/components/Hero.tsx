@@ -27,7 +27,7 @@ const Hero = () => {
             <img 
               src={logoKonsilo} 
               alt="Konsilo - Consultoria e Treinamento" 
-              className="h-32 md:h-48 mx-auto drop-shadow-2xl"
+              className="h-60 md:h-[22rem] mx-auto drop-shadow-2xl"
             />
           </div>
 
